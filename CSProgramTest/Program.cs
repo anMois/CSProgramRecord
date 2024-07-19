@@ -26,6 +26,13 @@
             return num1 * num2; //두 수의 곱을 구하기 위해 연산자 '*'기호를 사용한다.
         }
 
+        /// <summary>
+        /// 두 수의 몫을 구합니다. 몫은 정수로 표현합니다.
+        /// </summary>
+        public int DivSolution(int num1, int num2)
+        {
+            return num1 / num2; //두 수의 정수 몫을 구하기 위해 연산자 '/'기호를 사용한다.
+        }
 
         static void Main(string[] args)
         {
