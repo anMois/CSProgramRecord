@@ -68,7 +68,7 @@
         /// numbers의 각 원소에 두배한 원소를 가진 배열을 return하도록 
         /// solution 함수를 완성해주세요.
         /// </summary>
-        public static int[] solution(int[] numbers)
+        public static int[] DoubleArrysolution(int[] numbers)
         {
             int[] answer = new int[numbers.Length];
 
