@@ -4,18 +4,14 @@
     {
         static void Main(string[] args)
         {
-            int[] arr1 = new int[] { 1,2,7,10,11};
-            int[] arr2 = new int[] { 9,-1,0};
-
-            Console.WriteLine(solution(arr1));
-            Console.WriteLine(solution(arr2));
+            
         }
 
         /// <summary>
         /// 정수 num1, num2가 매개변수로 주어질 때, 
         /// num1를 num2로 나눈 나머지를 return 하도록 solution 함수를 완성해주세요.
         /// </summary>
-        public int solution(int num1, int num2)
+        public int RemainderSolution(int num1, int num2)
         {
             return num1 % num2;
         }
@@ -25,13 +21,34 @@
         /// 예를 들어 1, 2, 7, 10, 11의 중앙값은 7입니다. 
         /// 정수 배열 array가 매개변수로 주어질 때, 중앙값을 return 하도록 solution 함수를 완성해보세요.
         /// </summary>
-        public static int solution(int[] array)
+        public int ArrayMidSolution(int[] array)
         {
             Array.Sort(array);
 
             int mid = array.Length / 2;
 
             return array[mid];
+        }
+
+        /// <summary>
+        /// 정수 n이 매개변수로 주어질 때, 
+        /// n 이하의 홀수가 오름차순으로 담긴 배열을 return하도록 solution 함수를 완성해주세요.
+        /// </summary>
+        public int[] EvenNumbersolution(int n)
+        {
+            int size = n % 2 == 0 ? n / 2 : n / 2 + 1;
+            int[] answer = new int[size];
+            int count = 0;
+
+            for (int i = 0; i <= n; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    answer[count++] = i;
+                }                  
+            }
+
+            return answer;
         }
     }
 }
