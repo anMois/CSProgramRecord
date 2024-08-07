@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            
+            int[] arr = { 1, 2, 3, 3, 3, 4 };
+
+            Console.WriteLine(solution(arr));
         }
 
         /// <summary>
@@ -48,6 +50,32 @@
                 }                  
             }
 
+            return answer;
+        }
+
+        /// <summary>
+        /// 최빈값은 주어진 값 중에서 가장 자주 나오는 값을 의미합니다.
+        /// 정수 배열 array가 매개변수로 주어질 때,
+        /// 최빈값을 return 하도록 solution 함수를 완성해보세요.
+        /// 최빈값이 여러 개면 -1을 return 합니다.
+        /// </summary>
+        public static int solution(int[] array)
+        {
+            int answer = 0;
+            Dictionary<int, int> counts = new();
+            int num = 1;
+
+            //매개변수로 받은 배열을 돌린다.
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (!counts.ContainsKey(array[i]))
+                    counts.Add(array[i], num);                        
+            }
+
+
+
+            ////배열의 값을 카운트한다.
+            //카운트 한 값을 비교한다.
             return answer;
         }
     }
