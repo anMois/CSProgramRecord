@@ -52,7 +52,7 @@
         /// 평각일 때 4평각 : angle = 180
         /// 를 return하도록 solution 함수를 완성해주세요.
         /// </summary>
-        public int solution(int angle)
+        public int AngleSolution(int angle)
         {
             int answer = 0;
 
