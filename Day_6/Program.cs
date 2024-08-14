@@ -6,9 +6,6 @@ namespace Day_6
     {
         static void Main(string[] args)
         {
-            string str = solution("hello", 3);
-
-            Console.WriteLine(str);
         }
 
         /// <summary>
@@ -31,6 +28,38 @@ namespace Day_6
             }
 
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// 문자열 배열 strlist가 매개변수로 주어집니다. 
+        /// strlist 각 원소의 길이를 담은 배열을 retrun하도록 solution 함수를 완성해주세요.
+        /// </summary>
+        public int[] solution(string[] strlist)
+        {
+            int[] answer = new int[strlist.Length];
+
+            for (int i = 0; i < strlist.Length; i++)
+            {
+                answer[i] = strlist[i].Length;
+            }
+
+            return answer;
+        }
+
+        /// <summary>
+        /// 문자열 str1, str2가 매개변수로 주어집니다. 
+        /// str1 안에 str2가 있다면 1을 없다면 2를 return하도록 solution 함수를 완성해주세요.
+        /// </summary>
+        public int solution(string str1, string str2)
+        {
+            int answer = 0;
+
+            if(str1.Contains(str2))
+                answer = 1;
+            else
+                answer = 2;
+
+            return answer;
         }
     }
 }
